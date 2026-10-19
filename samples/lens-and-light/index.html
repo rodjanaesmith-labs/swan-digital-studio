@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--
+  Lens & Light Photography
+  Premium package website sample made by Swan Digital Studio.
+
+  IMPORTANT:
+  This is a demonstration website. Replace sample content, photographs,
+  testimonials, contact information, and package prices with the client's
+  real details before publishing.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Lens & Light Photography captures portraits, graduations, events, and business photography with a natural, timeless style.">
+
+  <meta name="theme-color" content="#243447">
+  <title>Lens & Light Photography | Every Moment, Beautifully Captured</title>
+
+  <!-- Google Fonts: elegant headings with clean, readable body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Relative path, so the stylesheet works when the website is online -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- defer waits until the HTML has been parsed before running JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Accessibility: allows keyboard users to skip directly to the content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- HEADER: logo, navigation links, and colour theme control -->
+  <header class="site-header">
+    <div class="container bar">
+      <a class="logo" href="#top" aria-label="Lens and Light Photography home">
+        <span class="logo-symbol" aria-hidden="true">L<span>&</span>L</span>
+        <span class="logo-text">
+          Lens & Light
+          <small>PHOTOGRAPHY</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="main-nav"
+      >☰</button>
+
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#items">Portfolio</a>
+        <a href="#plans">Packages</a>
+        <a href="#contact">Contact</a>
+
+        <button
+          class="theme-toggle"
+          id="theme"
+          type="button"
+          aria-label="Switch to dark theme"
+          aria-pressed="false"
+        >☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO: the first thing visitors see -->
+    <section class="hero" id="top">
+      <div class="hero-image" role="img" aria-label="Photographer capturing a beautiful moment"></div>
+      <div class="hero-shade"></div>
+
+      <div class="container hero-content">
+        <p class="eyebrow light">REAL MOMENTS. TIMELESS IMAGES.</p>
+
+        <h1>Every moment has<br><em>a story to tell.</em></h1>
+
+        <p class="hero-copy">
+          Portraits, celebrations, and business photography captured with
+          creativity, care, and a natural eye for the details that matter.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#items">Explore the Portfolio</a>
+          <a class="btn btn-outline" href="#contact">Book a Session</a>
+        </div>
+
+        <div class="hero-caption">
+          <span class="caption-line"></span>
+          <span>YOUR MOMENT, OUR PERSPECTIVE</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to learn about us">↓</a>
+    </section>
+
+    <!-- ABOUT: introduces the photography business -->
+    <section class="section section-about" id="about">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img
+            src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?auto=format&fit=crop&w=1000&q=85"
+            alt="Camera ready to capture a special moment"
+            loading="lazy"
+          >
+
+          <div class="photo-stamp">
+            <span>THE ART OF</span>
+            <strong>Seeing</strong>
+            <span>BEAUTY IN EVERY FRAME</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="eyebrow">BEHIND THE LENS</p>
+
+          <h2>Photography that feels <em>like you.</em></h2>
+
+          <p>
+            At Lens & Light Photography, we believe a photograph should do more
+            than show what a moment looked like. It should help you remember
+            how that moment felt.
+          </p>
+
+          <p>
+            From confident portraits and graduation milestones to meaningful
+            celebrations and polished business imagery, our goal is to create
+            photographs you will be proud to keep and share.
+          </p>
+
+          <div class="about-values">
+            <div>
+              <span class="value-number">01</span>
+              <strong>Natural moments</strong>
+              <p>Authentic expressions and thoughtful compositions.</p>
+            </div>
+
+            <div>
+              <span class="value-number">02</span>
+              <strong>Personal approach</strong>
+              <p>A session shaped around your needs and vision.</p>
+            </div>
+          </div>
+
+          <a class="text-link" href="#contact">Let's plan your session <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO: filter buttons and one card per photography service -->
+    <section class="section portfolio" id="items">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">A FEW FAVOURITE FRAMES</p>
+          <h2>Stories through <em>the lens.</em></h2>
+          <p>
+            Explore the photography styles we offer and find the right fit
+            for your next session or event.
+          </p>
+        </div>
+
+        <!-- Filter buttons: each data-f value matches a card's data-c value -->
+        <div class="tabs" role="group" aria-label="Filter portfolio">
+          <button class="filter-btn on" type="button" data-f="all" aria-pressed="true">All Work</button>
+          <button class="filter-btn" type="button" data-f="People" aria-pressed="false">Portraits</button>
+          <button class="filter-btn" type="button" data-f="Events" aria-pressed="false">Events</button>
+          <button class="filter-btn" type="button" data-f="Business" aria-pressed="false">Business</button>
+        </div>
+
+        <!-- PORTFOLIO GRID: replace sample images with the client's own work -->
+        <div class="portfolio-grid">
+          <!-- PORTFOLIO ITEM 01: PORTRAITS -->
+          <article class="portfolio-card" data-c="People">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about portrait photography">
+              <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85"
+                alt="Portrait photography example"
+                loading="lazy"
+              >
+              <span class="image-overlay"><span>Enquire about portraits ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Portraits</h3>
+                <p>Personal. Confident. Timeless.</p>
+              </div>
+              <span class="portfolio-index">01</span>
+            </div>
+          </article>
+
+          <!-- PORTFOLIO ITEM 02: GRADUATION -->
+          <article class="portfolio-card" data-c="People">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about graduation photography">
+              <img
+                src="https://images.unsplash.com/photo-1676054948291-61b735275d7a?auto=format&fit=crop&w=900&q=85"
+                alt="Graduate wearing a graduation cap and gown"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=85';"
+              >
+              <span class="image-overlay"><span>Enquire about graduation ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Graduation</h3>
+                <p>A milestone worth remembering.</p>
+              </div>
+              <span class="portfolio-index">02</span>
+            </div>
+          </article>
+
+          <!-- PORTFOLIO ITEM 03: EVENTS -->
+          <article class="portfolio-card" data-c="Events">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about event photography">
+              <img
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85"
+                alt="Elegant event venue prepared for a celebration"
+                loading="lazy"
+              >
+              <span class="image-overlay"><span>Enquire about events ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Events</h3>
+                <p>The people and moments that matter.</p>
+              </div>
+              <span class="portfolio-index">03</span>
+            </div>
+          </article>
+
+          <!-- PORTFOLIO ITEM 04: BUSINESS AND BRAND -->
+          <article class="portfolio-card" data-c="Business">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about business photography">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85"
+                alt="Professional workspace for business photography"
+                loading="lazy"
+              >
+              <span class="image-overlay"><span>Enquire about business ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Business & Brand</h3>
+                <p>Professional images for your brand.</p>
+              </div>
+              <span class="portfolio-index">04</span>
+            </div>
+          </article>
+
+          <!-- PORTFOLIO ITEM 05: LIFESTYLE -->
+          <article class="portfolio-card" data-c="People">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about lifestyle photography">
+              <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"
+                alt="Outdoor lifestyle portrait photography example"
+                loading="lazy"
+              >
+              <span class="image-overlay"><span>Enquire about lifestyle ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Lifestyle</h3>
+                <p>Relaxed images with personality.</p>
+              </div>
+              <span class="portfolio-index">05</span>
+            </div>
+          </article>
+
+          <!-- PORTFOLIO ITEM 06: PRODUCT PHOTOGRAPHY -->
+          <article class="portfolio-card" data-c="Business">
+            <a class="portfolio-image" href="#contact" aria-label="Enquire about product photography">
+              <img
+                src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                alt="Product photography example"
+                loading="lazy"
+              >
+              <span class="image-overlay"><span>Enquire about products ↗</span></span>
+            </a>
+            <div class="portfolio-info">
+              <div>
+                <h3>Product Photography</h3>
+                <p>Clean images that showcase your products.</p>
+              </div>
+              <span class="portfolio-index">06</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="portfolio-note">
+          Portfolio photographs are illustrative samples. Replace them with
+          the photographer's own work before presenting this as a real portfolio.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURE BAND: highlights the value of professional photography -->
+    <section class="feature-band">
+      <div class="feature-background"></div>
+      <div class="feature-shade"></div>
+
+      <div class="container feature-content">
+        <p class="eyebrow light">MORE THAN A PHOTOGRAPH</p>
+        <h2>Freeze the moment.<br><em>Keep the feeling.</em></h2>
+        <p>
+          The laughter, the little details, the milestones, and the people
+          beside you. Let's make something worth looking back on.
+        </p>
+        <a class="btn btn-primary" href="#contact">Let's Create Something</a>
+      </div>
+    </section>
+
+    <!-- PACKAGES: replace the placeholder prices with the client's real rates -->
+    <section class="section packages" id="plans">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SIMPLE OPTIONS, PERSONAL RESULTS</p>
+          <h2>Find your perfect <em>session.</em></h2>
+          <p>
+            Choose a starting package and contact us to discuss the details
+            that matter most to you.
+          </p>
+        </div>
+
+        <div class="package-grid">
+          <!-- BASIC PACKAGE -->
+          <article class="package-card">
+            <span class="package-number">01 / START HERE</span>
+            <h3>Basic</h3>
+            <p class="package-summary">A simple session for a special moment.</p>
+
+            <!-- Replace this placeholder with the actual starting price -->
+            <p class="package-price">Price on request</p>
+
+            <ul>
+              <li>Pre-session consultation</li>
+              <li>One photography session</li>
+              <li>Selected edited photographs</li>
+              <li>Digital delivery</li>
+            </ul>
+
+            <a class="btn btn-secondary package-select" href="#contact" data-package="Basic">Choose Basic</a>
+          </article>
+
+          <!-- STANDARD PACKAGE -->
+          <article class="package-card featured">
+            <span class="featured-label">POPULAR CHOICE</span>
+            <span class="package-number">02 / THE BALANCE</span>
+            <h3>Standard</h3>
+            <p class="package-summary">More variety and time to tell your story.</p>
+
+            <!-- Replace this placeholder with the actual starting price -->
+            <p class="package-price">Price on request</p>
+
+            <ul>
+              <li>Pre-session consultation</li>
+              <li>Extended photography session</li>
+              <li>Larger selection of edited photographs</li>
+              <li>Digital gallery or delivery link</li>
+              <li>Planning guidance</li>
+            </ul>
+
+            <a class="btn btn-primary package-select" href="#contact" data-package="Standard">Choose Standard</a>
+          </article>
+
+          <!-- PREMIUM PACKAGE -->
+          <article class="package-card">
+            <span class="package-number">03 / THE FULL STORY</span>
+            <h3>Premium</h3>
+            <p class="package-summary">A more comprehensive photography experience.</p>
+
+            <!-- Replace this placeholder with the actual starting price -->
+            <p class="package-price">Custom quote</p>
+
+            <ul>
+              <li>Detailed pre-session planning</li>
+              <li>Extended coverage, as agreed</li>
+              <li>Premium edited image selection</li>
+              <li>Priority gallery delivery, if offered</li>
+              <li>Custom requests discussed in advance</li>
+            </ul>
+
+            <a class="btn btn-secondary package-select" href="#contact" data-package="Premium">Choose Premium</a>
+          </article>
+        </div>
+
+        <p class="package-note">
+          Package contents are sample suggestions, not confirmed business terms.
+          Final pricing and deliverables should be agreed with the client.
+          Travel, additional editing, prints, and extra coverage may require separate quotes.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ: answers common questions before a customer makes contact -->
+    <section class="section faq" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <p class="eyebrow">GOOD TO KNOW</p>
+          <h2>A few things<br>you may be <em>wondering.</em></h2>
+          <p>
+            Have another question? Send an enquiry and we can discuss
+            your session, timing, and requirements.
+          </p>
+          <a class="text-link" href="#contact">Ask us a question <span>↗</span></a>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>How do I book a photography session?</summary>
+            <p>
+              Complete the enquiry form with your preferred date and type of
+              session. We can then discuss availability and next steps.
+            </p>
+          </details>
+
+          <details>
+            <summary>How should I prepare for my session?</summary>
+            <p>
+              Once the session is discussed, you can agree on clothing,
+              location, timing, and any important details in advance.
+            </p>
+          </details>
+
+          <details>
+            <summary>When will I receive my photographs?</summary>
+            <p>
+              Delivery time depends on the session and the agreed editing
+              requirements. Confirm the expected timeline before booking.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can I request a specific photography style?</summary>
+            <p>
+              Yes. Share your ideas, preferred style, and any reference
+              images when enquiring so the photographer can discuss what is possible.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT: enquiry form for all packages -->
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow light">YOUR NEXT CHAPTER STARTS HERE</p>
+          <h2>Let's capture<br><em>something meaningful.</em></h2>
+
+          <p>
+            Tell us what you have in mind. Whether it is a personal portrait,
+            a milestone, an event, or images for your business, let's start
+            planning your session.
+          </p>
+
+          <!-- Replace these details with the client's real business information -->
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span class="detail-icon">✦</span>
+              <div>
+                <strong>Business hours</strong>
+                <p>Monday–Saturday, 9:00 a.m.–6:00 p.m. (sample hours)</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span class="detail-icon">✦</span>
+              <div>
+                <strong>Location</strong>
+                <p>Replace with the real business address or service area.</p>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span class="detail-icon">✦</span>
+              <div>
+                <strong>Prefer WhatsApp?</strong>
+                <p>Start a conversation about your photography needs.</p>
+                <a
+                  class="contact-whatsapp"
+                  href="https://wa.me/18760000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Message us on WhatsApp ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="f">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h3>Tell us about your plans.</h3>
+          <p class="form-intro">Fields marked with * are required.</p>
+
+          <div class="form-row">
+            <label for="customer-name">Your name *</label>
+            <input
+              id="customer-name"
+              name="name"
+              type="text"
+              placeholder="Full name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-row">
+            <label for="customer-contact">Phone or email *</label>
+            <input
+              id="customer-contact"
+              name="contact"
+              type="text"
+              placeholder="How can we reach you?"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-row">
+            <label for="session-type">Photography service *</label>
+            <select id="session-type" name="service" required>
+              <option value="">Choose a service</option>
+              <option>Portraits</option>
+              <option>Graduation</option>
+              <option>Events</option>
+              <option>Business & Brand</option>
+              <option>Lifestyle</option>
+              <option>Product Photography</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="package-choice">Package of interest</label>
+            <select id="package-choice" name="package">
+              <option value="">Not sure yet</option>
+              <option>Basic</option>
+              <option>Standard</option>
+              <option>Premium</option>
+              <option>Custom request</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="session-date">Preferred date *</label>
+            <input id="session-date" name="date" type="date" required>
+          </div>
+
+          <div class="form-row">
+            <label for="session-message">Tell us a little more *</label>
+            <textarea
+              id="session-message"
+              name="message"
+              rows="4"
+              placeholder="Describe your session, location, number of people, or any ideas..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary form-submit" type="submit">Prepare My Enquiry ↗</button>
+
+          <!-- JavaScript displays validation and demo submission messages here -->
+          <p id="msg" class="form-status" role="status" aria-live="polite"></p>
+
+          <!-- NOTE: this demo does not send email or store submissions. -->
+          <p class="form-note">
+            Demo form: your message is prepared for WhatsApp after the business
+            number is configured. You must review and send it yourself.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- REVIEWS: static cards at the bottom; no rotating slider or buttons -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">KIND WORDS, LASTING MEMORIES</p>
+          <h2>Experiences worth <em>sharing.</em></h2>
+          <p>
+            A dedicated place for real client feedback and the experiences
+            behind the photographs.
+          </p>
+        </div>
+
+        <!-- Replace these sample reviews with genuine client feedback -->
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-stars" aria-label="Sample five-star rating">★★★★★</div>
+            <blockquote>
+              “Easy to work with and very professional. The whole experience
+              felt comfortable from start to finish.”
+            </blockquote>
+            <p class="review-author">Sample testimonial — replace before publishing</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="Sample five-star rating">★★★★★</div>
+            <blockquote>
+              “Everything was organised, and the photographs captured
+              the feeling of the day beautifully.”
+            </blockquote>
+            <p class="review-author">Sample testimonial — replace before publishing</p>
+          </article>
+
+          <article class="review-card">
+            <div class="review-stars" aria-label="Sample five-star rating">★★★★★</div>
+            <blockquote>
+              “The results were just what we hoped for. We would love to
+              work together again.”
+            </blockquote>
+            <p class="review-author">Sample testimonial — replace before publishing</p>
+          </article>
+        </div>
+
+        <p class="review-note">
+          These are sample testimonials for the website demo, not verified
+          client reviews. Publish only genuine feedback with appropriate permission.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: copyright and Swan Digital Studio credit -->
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="logo footer-logo" href="#top">
+        <span class="logo-symbol">L<span>&</span>L</span>
+        <span class="logo-text">Lens & Light<small>PHOTOGRAPHY</small></span>
+      </a>
+
+      <p class="footer-tagline">Every moment. A story worth keeping.</p>
+      <a class="footer-top" href="#top">Back to top ↑</a>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="yr"></span> Lens & Light Photography. All rights reserved.</p>
+      <p>Website by <a href="#top">Swan Digital Studio</a></p>
+    </div>
+  </footer>
+</body>
+</html>

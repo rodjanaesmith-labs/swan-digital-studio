@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<!-- Glow Nails: Starter package sample by Swan Digital Studio.
+     Replace placeholder contact details before publishing. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Glow Nails offers manicures, gel sets, pedicures and custom nail art. Contact us to book your appointment.">
+  <meta name="theme-color" content="#d6457e">
+  <title>Glow Nails | Beautiful Nails, Beautiful You</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="bar">
+    <a class="logo" href="#top" aria-label="Glow Nails home">
+      <span class="logo-icon" aria-hidden="true">✿</span>
+      Glow Nails
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#items">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" id="theme" type="button"
+        aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR NAILS, YOUR STYLE</p>
+        <h1>A little glow.<br>A lot of gorgeous.</h1>
+        <p class="hero-copy">
+          Beautiful nails, thoughtful care, and designs that make
+          every day feel like a special occasion.
+        </p>
+        <a class="btn btn-light"
+          href="https://wa.me/18760000000"
+          target="_blank" rel="noopener noreferrer">
+          Book on WhatsApp <span aria-hidden="true">↗</span>
+        </a>
+        <p class="hero-note">Your next favourite set is waiting.</p>
+      </div>
+      <div class="hero-decoration" aria-hidden="true">
+        <span class="sparkle sparkle-one">✦</span>
+        <span class="sparkle sparkle-two">✧</span>
+        <div class="nail-art">
+          <span>♡</span>
+          <small>NAIL<br>YOUR LOOK</small>
+        </div>
+        <span class="sparkle sparkle-three">✦</span>
+      </div>
+    </section>
+
+    <section class="services section" id="items">
+      <div class="section-heading">
+        <p class="eyebrow">FIND YOUR FAVOURITE</p>
+        <h2>Our Services</h2>
+        <p>From everyday elegance to a little extra sparkle.</p>
+      </div>
+
+      <div class="tabs" role="group" aria-label="Filter services">
+        <button class="filter-btn on" type="button" data-f="all"
+          aria-pressed="true">All Services</button>
+        <button class="filter-btn" type="button" data-f="Hands"
+          aria-pressed="false">Hand Care</button>
+        <button class="filter-btn" type="button" data-f="Feet"
+          aria-pressed="false">Foot Care</button>
+        <button class="filter-btn" type="button" data-f="Extras"
+          aria-pressed="false">Nail Art</button>
+      </div>
+
+      <div class="grid" id="service-grid">
+        <article class="card" data-c="Hands">
+          <div class="service-icon" aria-hidden="true">♡</div>
+          <p class="service-type">HAND CARE</p>
+          <h3>Classic Manicure</h3>
+          <p>Neat shaping, cuticle care, and polish for a fresh, polished look.</p>
+        </article>
+
+        <article class="card" data-c="Hands">
+          <div class="service-icon" aria-hidden="true">✧</div>
+          <p class="service-type">HAND CARE</p>
+          <h3>Gel Set</h3>
+          <p>A glossy, durable finish for nails that deserve to shine.</p>
+        </article>
+
+        <article class="card" data-c="Feet">
+          <div class="service-icon" aria-hidden="true">❀</div>
+          <p class="service-type">FOOT CARE</p>
+          <h3>Relaxing Pedicure</h3>
+          <p>Give your feet some love with a refreshing care and polish session.</p>
+        </article>
+
+        <article class="card" data-c="Extras">
+          <div class="service-icon" aria-hidden="true">✦</div>
+          <p class="service-type">CREATIVE TOUCH</p>
+          <h3>Custom Nail Art</h3>
+          <p>Personalised designs, pretty details, and creative looks made for you.</p>
+        </article>
+      </div>
+
+      <p class="empty" id="empty" hidden>
+        No services found in this category.
+      </p>
+      <p class="service-note">
+        Service availability, prices, and appointment times can be confirmed on WhatsApp.
+      </p>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-mark" aria-hidden="true">
+        <span>G</span>
+        <span class="about-flower">✿</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow">WELCOME TO GLOW NAILS</p>
+        <h2>Feel good down to your fingertips.</h2>
+        <p>
+          At Glow Nails, we believe a great nail set is more than a beauty
+          treatment — it's a little moment just for you. Whether you love
+          soft, natural colours or bold, creative designs, we're here to
+          help you find your look.
+        </p>
+        <a class="text-link" href="#contact">Let's plan your next set ↗</a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-card">
+        <p class="eyebrow">LET'S GET YOU GLOWING</p>
+        <h2>Ready for your next set?</h2>
+        <p>
+          Have a question or want to book an appointment?
+          Send us a message and let's talk nails.
+        </p>
+        <a class="btn btn-pink"
+          href="https://wa.me/18760000000"
+          target="_blank" rel="noopener noreferrer">
+          Message us on WhatsApp ↗
+        </a>
+
+        <div class="contact-details">
+          <div>
+            <span class="detail-icon" aria-hidden="true">◷</span>
+            <p><strong>Opening Hours</strong><br>Monday–Saturday, 9 AM–6 PM</p>
+          </div>
+          <div>
+            <span class="detail-icon" aria-hidden="true">⌖</span>
+            <p><strong>Find Us</strong><br>Add your salon address here</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-logo" href="#top">✿ Glow Nails</a>
+    <p>Beautiful nails, beautiful you.</p>
+    <p class="copyright">
+      © <span id="yr"></span> Glow Nails · Website by Swan Digital Studio
+    </p>
+  </footer>
+</body>
+</html>

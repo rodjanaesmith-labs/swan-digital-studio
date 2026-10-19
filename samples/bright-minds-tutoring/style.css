@@ -1,0 +1,404 @@
+
+/* =========================================
+   BRIGHT MINDS TUTORING
+   Website design by Swan Digital Studio
+   ========================================= */
+
+/* 1. Theme variables */
+:root {
+  --c: #2f6fde;
+  --c-dark: #2054b3;
+  --bg: #ffffff;
+  --tx: #1d2733;
+  --muted: #657386;
+  --card: #ffffff;
+  --soft: #eef4ff;
+  --border: #dce5f2;
+  --shadow: 0 8px 24px rgba(38, 77, 135, 0.08);
+}
+
+/* Dark mode colors */
+body.dark {
+  --bg: #121923;
+  --tx: #e8edf5;
+  --muted: #b5c0d0;
+  --card: #1c2736;
+  --soft: #202f46;
+  --border: #34445b;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.7 Verdana, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--tx);
+  transition: background 0.25s, color 0.25s;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+h3 {
+  line-height: 1.4;
+}
+
+/* 3. Header and navigation */
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 6%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.bar nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.bar nav a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bar nav a:hover {
+  color: var(--c);
+}
+
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--tx);
+}
+
+/* 4. Hero section */
+.hero {
+  max-width: none;
+  display: grid;
+  place-items: center;
+  min-height: 430px;
+  padding: 80px 24px;
+  text-align: center;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(135deg, #1949a4, #2f6fde 60%, #67a2f5);
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  font-size: 1.08rem;
+}
+
+.eyebrow {
+  margin-bottom: 12px;
+  color: var(--c);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero .eyebrow {
+  color: #e5eeff;
+}
+
+/* 5. Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 9px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-btn {
+  background: #ffffff;
+  color: #2054b3;
+}
+
+.contact-btn {
+  background: var(--c);
+  color: #ffffff;
+}
+
+.contact-btn:hover {
+  background: var(--c-dark);
+}
+
+/* 6. Section headings */
+.section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+/* 7. Subject cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--c);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(38, 77, 135, 0.14);
+}
+
+.subject-icon {
+  display: grid;
+  place-items: center;
+  min-height: 100px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: var(--soft);
+  font-size: 2.7rem;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* 8. Why choose us */
+.benefits {
+  max-width: none;
+  background: var(--soft);
+}
+
+.benefits .section-heading {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1052px;
+  margin: 0 auto;
+}
+
+.benefit {
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--card);
+  text-align: center;
+}
+
+.benefit > span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 2.2rem;
+}
+
+.benefit h3 {
+  margin-bottom: 8px;
+}
+
+.benefit p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* 9. Contact section */
+.contact-section {
+  text-align: center;
+}
+
+.contact-info {
+  max-width: 620px;
+  margin: 0 auto 25px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  text-align: left;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* 10. Footer */
+footer {
+  padding: 30px 20px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 4px;
+}
+
+.credit {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* 11. Keyboard accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--c);
+  outline-offset: 4px;
+}
+
+/* 12. Tablet layout */
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .benefit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 13. Mobile layout */
+@media (max-width: 520px) {
+  section {
+    padding: 52px 18px;
+  }
+
+  .bar {
+    padding: 12px 14px;
+  }
+
+  .bar nav {
+    gap: 12px;
+  }
+
+  .bar nav a {
+    font-size: 0.88rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .hero {
+    min-height: 370px;
+    padding: 60px 18px;
+  }
+
+  .hero h1 {
+    letter-spacing: -0.8px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 14. Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
