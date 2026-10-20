@@ -1,0 +1,880 @@
+/* =========================================
+   BEAD & BLOOM — MAIN STYLESHEET
+
+   This stylesheet controls the overall design,
+   colours, typography, layout, product cards,
+   contact form, and responsive behaviour.
+
+   The body.dark class is added or removed by
+   script.js when the visitor changes the theme.
+========================================= */
+
+/* -----------------------------------------
+   1. COLOUR VARIABLES AND RESET
+----------------------------------------- */
+
+:root {
+  --c: #0f8b8d;
+  --c-dark: #08696b;
+  --c-light: #dff5ef;
+
+  --bg: #fffaf7;
+  --text: #263238;
+  --muted: #697579;
+  --card: #ffffff;
+  --soft: #fff0eb;
+  --border: #eadfda;
+  --shadow: 0 12px 32px rgba(48, 39, 37, 0.08);
+
+  --heading-font: "Playfair Display", Georgia, serif;
+  --body-font: "DM Sans", Arial, sans-serif;
+}
+
+/* Use predictable sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth movement when clicking section links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+/* Basic page styling */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body-font);
+  line-height: 1.7;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--c);
+  outline-offset: 3px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* -----------------------------------------
+   2. HEADER AND NAVIGATION
+----------------------------------------- */
+
+.bar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+
+  padding: 15px 5%;
+  border-bottom: 1px solid var(--border);
+
+  background: var(--bg);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--text);
+  font-family: var(--heading-font);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+
+  border-radius: 50%;
+  background: var(--c-light);
+  color: var(--c-dark);
+  font-size: 1.5rem;
+}
+
+.bar nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.bar nav a {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bar nav a:hover {
+  color: var(--c);
+}
+
+/* Dark-mode toggle button */
+.theme-btn {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(-8deg);
+  background: var(--soft);
+}
+
+/* -----------------------------------------
+   3. REUSABLE SECTION STYLES
+----------------------------------------- */
+
+.section {
+  padding: 82px 5%;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--c-dark);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 38px;
+  text-align: center;
+}
+
+.section-heading h2,
+.contact-copy h2 {
+  margin: 0 0 16px;
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+}
+
+/* -----------------------------------------
+   4. HERO SECTION
+----------------------------------------- */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 45px;
+
+  min-height: 520px;
+  overflow: hidden;
+  padding: 75px 8%;
+
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(15, 139, 141, 0.13),
+      transparent 35%
+    ),
+    linear-gradient(135deg, var(--soft), var(--bg));
+}
+
+.hero-content {
+  max-width: 640px;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-family: var(--heading-font);
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 540px;
+  margin-bottom: 28px;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Reusable button styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 12px 20px;
+
+  border: 1px solid transparent;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--c);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--c-dark);
+}
+
+.btn-outline {
+  border-color: var(--c);
+  background: transparent;
+  color: var(--c-dark);
+}
+
+.btn-outline:hover {
+  background: var(--c-light);
+}
+
+/* Decorative artwork made entirely with CSS */
+.hero-art {
+  position: relative;
+  display: grid;
+  min-height: 340px;
+  place-items: center;
+  isolation: isolate;
+}
+
+.art-circle {
+  position: absolute;
+  border: 1px solid rgba(15, 139, 141, 0.25);
+  border-radius: 50%;
+}
+
+.circle-one {
+  width: 300px;
+  height: 300px;
+}
+
+.circle-two {
+  width: 230px;
+  height: 230px;
+  border-width: 2px;
+}
+
+.bead-art {
+  display: grid;
+  width: 175px;
+  height: 175px;
+  place-items: center;
+
+  border: 12px dotted #ffffff;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: var(--shadow);
+
+  color: #ffffff;
+  font-size: 6rem;
+}
+
+.floating-bead {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bead-one {
+  top: 40px;
+  left: 18%;
+}
+
+.bead-two {
+  top: 70px;
+  right: 13%;
+  width: 15px;
+  height: 15px;
+  background: #e8a6a1;
+}
+
+.bead-three {
+  bottom: 40px;
+  left: 22%;
+  width: 26px;
+  height: 26px;
+  background: #edc66f;
+}
+
+.bead-four {
+  right: 18%;
+  bottom: 65px;
+  background: #e8a6a1;
+}
+
+/* -----------------------------------------
+   5. ABOUT SECTION AND FEATURES
+----------------------------------------- */
+
+.about {
+  background: var(--card);
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature {
+  padding: 28px 22px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+  text-align: center;
+}
+
+.feature > span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 2rem;
+}
+
+.feature h3 {
+  margin: 0 0 8px;
+  font-family: var(--heading-font);
+  font-size: 1.3rem;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* -----------------------------------------
+   6. PRODUCT FILTER BUTTONS
+----------------------------------------- */
+
+.items {
+  background: var(--bg);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 32px;
+}
+
+.tabs button {
+  padding: 10px 17px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.87rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* .on marks the currently selected filter */
+.tabs button:hover,
+.tabs button.on {
+  border-color: var(--c);
+  background: var(--c);
+  color: #ffffff;
+}
+
+/* -----------------------------------------
+   7. PRODUCT GRID AND CARDS
+----------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--card);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.035);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+/* Product illustrations use emoji placeholders instead of photos */
+.product-icon {
+  display: grid;
+  min-height: 170px;
+  place-items: center;
+  font-size: 4rem;
+}
+
+.product-icon.pink {
+  background: #f9dfe9;
+}
+
+.product-icon.peach {
+  background: #ffe5d8;
+}
+
+.product-icon.lilac {
+  background: #e9e0f8;
+}
+
+.product-icon.mint {
+  background: #dff2e6;
+}
+
+.card-body {
+  padding: 21px;
+}
+
+.category {
+  margin: 0 0 8px;
+  color: var(--c-dark);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-family: var(--heading-font);
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.card-body > p:not(.category) {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.card .price {
+  margin: 15px 0 10px;
+  color: var(--c-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 5px;
+  color: var(--c-dark);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+/* Message displayed when a category has no matching products */
+.empty {
+  margin-top: 25px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* -----------------------------------------
+   8. CONTACT SECTION AND FORM
+----------------------------------------- */
+
+.contact {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(15, 139, 141, 0.1),
+      transparent 30%
+    ),
+    var(--soft);
+}
+
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-copy > p:not(.eyebrow) {
+  color: var(--muted);
+}
+
+.contact-links {
+  margin-top: 22px;
+}
+
+.contact-links a {
+  color: var(--c-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+#f {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 13px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #929b9e;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--c);
+  outline: 2px solid rgba(15, 139, 141, 0.13);
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+.form-message {
+  min-height: 1.5em;
+  margin: 12px 0 0;
+  overflow-wrap: anywhere;
+  color: var(--c-dark);
+  font-size: 0.88rem;
+}
+
+.form-message.error {
+  color: #b42318;
+}
+
+/* -----------------------------------------
+   9. FOOTER
+----------------------------------------- */
+
+.footer {
+  padding: 25px 5%;
+  border-top: 1px solid var(--border);
+  background: var(--card);
+  text-align: center;
+}
+
+.footer p {
+  margin: 5px 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.studio-credit strong {
+  color: var(--c-dark);
+}
+
+/* -----------------------------------------
+   10. DARK MODE
+
+   JavaScript adds body.dark when dark mode is
+   enabled. These variables replace the light
+   theme's colours throughout the page.
+----------------------------------------- */
+
+body.dark {
+  --bg: #151c20;
+  --text: #f0f4f4;
+  --muted: #b5c0c3;
+  --card: #202a2f;
+  --soft: #202b2d;
+  --border: #354247;
+  --c-light: #263d3d;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .hero {
+  background:
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(15, 139, 141, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #202b2d, #151c20);
+}
+
+body.dark .product-icon.pink {
+  background: #523440;
+}
+
+body.dark .product-icon.peach {
+  background: #50382f;
+}
+
+body.dark .product-icon.lilac {
+  background: #40374f;
+}
+
+body.dark .product-icon.mint {
+  background: #2d473b;
+}
+
+body.dark .btn-outline {
+  color: #8ce0d8;
+}
+
+body.dark .tabs button:hover,
+body.dark .tabs button.on {
+  color: #ffffff;
+}
+
+body.dark .form-message.error {
+  color: #ffb4ab;
+}
+
+/* -----------------------------------------
+   11. TABLET RESPONSIVENESS
+----------------------------------------- */
+
+@media (max-width: 950px) {
+  .hero {
+    padding-inline: 5%;
+    gap: 25px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features {
+    gap: 14px;
+  }
+
+  .contact-inner {
+    gap: 30px;
+  }
+}
+
+/* -----------------------------------------
+   12. MOBILE RESPONSIVENESS
+----------------------------------------- */
+
+@media (max-width: 650px) {
+  .bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 5%;
+  }
+
+  .bar nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px 15px;
+  }
+
+  .bar nav a {
+    font-size: 0.83rem;
+  }
+
+  .theme-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 55px 6%;
+  }
+
+  .hero-art {
+    min-height: 280px;
+  }
+
+  .circle-one {
+    width: 250px;
+    height: 250px;
+  }
+
+  .circle-two {
+    width: 195px;
+    height: 195px;
+  }
+
+  .bead-art {
+    width: 145px;
+    height: 145px;
+    font-size: 5rem;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  #f {
+    padding: 22px;
+  }
+}
+
+/* Narrow phones: avoid cramped buttons and cards */
+@media (max-width: 420px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .tabs {
+    gap: 8px;
+  }
+
+  .tabs button {
+    padding: 9px 12px;
+    font-size: 0.82rem;
+  }
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

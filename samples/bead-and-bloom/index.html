@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page information and responsive settings -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bead &amp; Bloom | Handmade with Love</title>
+
+  <meta
+    name="description"
+    content="Discover beautiful handmade jewellery, beaded accessories, and thoughtful gifts at Bead & Bloom."
+  >
+
+  <!-- Browser tab icon: replace this path if you have a Bead & Bloom logo -->
+  <link rel="icon" href="assets/bead-bloom-logo.png">
+
+  <!-- Google Fonts for elegant headings and readable body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- defer waits until the HTML is parsed before running JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- =========================================
+       HEADER AND NAVIGATION
+       Contains the brand name, navigation links,
+       and dark-mode toggle button.
+  ========================================== -->
+  <header class="bar">
+    <a class="brand" href="#top" aria-label="Bead and Bloom home">
+      <span class="brand-icon" aria-hidden="true">✿</span>
+      <span>Bead &amp; Bloom</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#top">Home</a>
+      <a href="#items">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+
+      <!-- JavaScript changes this button's icon and theme -->
+      <button
+        class="theme-btn"
+        id="theme"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Toggle dark mode"
+      >🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =========================================
+         HERO SECTION
+         Introduces the business and provides a
+         quick way for customers to make enquiries.
+    ========================================== -->
+    <section class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow">Handmade with love</p>
+
+        <h1>Little details.<br>Beautiful memories.</h1>
+
+        <p>
+          Discover handmade jewellery, colourful beaded accessories,
+          and thoughtful gifts created to make every moment special.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#items">Explore the Collection</a>
+
+          <!-- Replace the number with the real business WhatsApp number.
+               Use country code and digits only in the URL. -->
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/18760000000"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Decorative artwork; the design uses CSS and emoji instead of photos -->
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="bead-art">✿</div>
+        <span class="floating-bead bead-one"></span>
+        <span class="floating-bead bead-two"></span>
+        <span class="floating-bead bead-three"></span>
+        <span class="floating-bead bead-four"></span>
+      </div>
+    </section>
+
+    <!-- =========================================
+         ABOUT SECTION
+         Briefly describes the brand and its style.
+    ========================================== -->
+    <section class="about section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">Our little world</p>
+        <h2>Made to make you smile</h2>
+        <p>
+          Bead &amp; Bloom celebrates creativity, colour, and the beauty
+          of handmade pieces. Whether you're treating yourself or
+          choosing a gift, there's something special in every detail.
+        </p>
+      </div>
+
+      <div class="features">
+        <article class="feature">
+          <span aria-hidden="true">🧵</span>
+          <h3>Made with Care</h3>
+          <p>Creative pieces inspired by colour, detail, and individuality.</p>
+        </article>
+
+        <article class="feature">
+          <span aria-hidden="true">🌸</span>
+          <h3>Unique Designs</h3>
+          <p>Fun accessories that help you express your own style.</p>
+        </article>
+
+        <article class="feature">
+          <span aria-hidden="true">🎁</span>
+          <h3>Lovely Gifts</h3>
+          <p>Thoughtful gift ideas for birthdays and special occasions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================
+         SHOP / PRODUCT COLLECTION
+         The data-category values must match the
+         filter buttons' data-f values in this section.
+    ========================================== -->
+    <section class="items section" id="items">
+      <div class="section-heading">
+        <p class="eyebrow">Find your favourite</p>
+        <h2>The Collection</h2>
+        <p>
+          Browse our sample collection. Contact us for product
+          details, availability, and pricing.
+        </p>
+      </div>
+
+      <!--
+        PRODUCT FILTERS
+        data-f="all" shows every product.
+        Other data-f values match each product's data-c value.
+      -->
+      <div class="tabs" role="group" aria-label="Filter products">
+        <button class="on" type="button" data-f="all" aria-pressed="true">
+          All Items
+        </button>
+        <button type="button" data-f="Bracelets" aria-pressed="false">
+          Bracelets
+        </button>
+        <button type="button" data-f="Earrings" aria-pressed="false">
+          Earrings
+        </button>
+        <button type="button" data-f="Gifts" aria-pressed="false">
+          Gifts
+        </button>
+      </div>
+
+      <!-- JavaScript hides cards that do not match the selected category -->
+      <div class="grid" id="product-grid">
+
+        <!-- PRODUCT 1: Bracelet -->
+        <article class="card" data-c="Bracelets">
+          <div class="product-icon pink" aria-hidden="true">📿</div>
+          <div class="card-body">
+            <p class="category">Bracelets</p>
+            <h3>Pretty Beaded Bracelet</h3>
+            <p>
+              A colourful accessory designed to add a playful touch
+              to your everyday style.
+            </p>
+            <p class="price">Price on request</p>
+            <a class="text-link" href="#contact">Ask about this item →</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 2: Earrings -->
+        <article class="card" data-c="Earrings">
+          <div class="product-icon peach" aria-hidden="true">✨</div>
+          <div class="card-body">
+            <p class="category">Earrings</p>
+            <h3>Bloom Drop Earrings</h3>
+            <p>
+              A bright, elegant design for everyday outfits and
+              special occasions.
+            </p>
+            <p class="price">Price on request</p>
+            <a class="text-link" href="#contact">Ask about this item →</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 3: Gift -->
+        <article class="card" data-c="Gifts">
+          <div class="product-icon lilac" aria-hidden="true">🎁</div>
+          <div class="card-body">
+            <p class="category">Gifts</p>
+            <h3>Little Gift Box</h3>
+            <p>
+              A thoughtful gift idea for birthdays, celebrations,
+              or someone who deserves a little surprise.
+            </p>
+            <p class="price">Price on request</p>
+            <a class="text-link" href="#contact">Ask about this item →</a>
+          </div>
+        </article>
+
+        <!-- PRODUCT 4: Bracelet -->
+        <article class="card" data-c="Bracelets">
+          <div class="product-icon mint" aria-hidden="true">🌼</div>
+          <div class="card-body">
+            <p class="category">Bracelets</p>
+            <h3>Flower Charm Bracelet</h3>
+            <p>
+              A sweet floral-inspired accessory for anyone who loves
+              delicate, colourful details.
+            </p>
+            <p class="price">Price on request</p>
+            <a class="text-link" href="#contact">Ask about this item →</a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Shown by JavaScript if a selected filter has no products -->
+      <p class="empty" id="empty" hidden>
+        No products found in this category just yet.
+        Try selecting another category.
+      </p>
+    </section>
+
+    <!-- =========================================
+         CONTACT SECTION
+         The form opens a WhatsApp message.
+         It does not send anything automatically.
+    ========================================== -->
+    <section class="contact section" id="contact">
+      <div class="contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">Let's talk</p>
+          <h2>A little something just for you.</h2>
+          <p>
+            Have a question about an item, want to enquire about a gift,
+            or have a custom idea in mind? Send us a message.
+          </p>
+
+          <div class="contact-links">
+            <a
+              href="https://wa.me/18760000000"
+              target="_blank"
+              rel="noopener noreferrer"
+            >WhatsApp us ↗</a>
+          </div>
+        </div>
+
+        <!-- JavaScript validates this form and prepares a WhatsApp message -->
+        <form id="f">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="reply">Email or phone number</label>
+            <input
+              id="reply"
+              name="reply"
+              type="text"
+              placeholder="How can we reach you?"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us what you're looking for..."
+              required
+            ></textarea>
+          </div>
+
+          <button class="btn btn-primary submit-btn" type="submit">
+            Prepare WhatsApp Message
+          </button>
+
+          <!-- Status and validation messages appear here -->
+          <p class="form-message" id="msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================
+       FOOTER
+       The year is filled in automatically by JavaScript.
+  ========================================== -->
+  <footer class="footer">
+    <p>
+      © <span id="yr"></span> Bead &amp; Bloom. Handmade with love.
+    </p>
+    <p class="studio-credit">
+      Website concept by <strong>Swan Digital Studio</strong>
+    </p>
+  </footer>
+</body>
+</html>
