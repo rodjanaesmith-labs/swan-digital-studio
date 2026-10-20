@@ -2,7 +2,7 @@
 
 <p align="center">
   <img
-    src="assets/Swan%20Digital%20Studio%20Logo.png"
+    src="assets/Swan Digital Studio Logo.png"
     alt="Swan Digital Studio Logo"
     width="250"
   />
@@ -15,10 +15,6 @@
 </p>
 
 <p align="center">
-  <a href="https://rodjanaesmith-labs.github.io/swan-digital-studio/">
-    Website
-  </a>
-  ·
   <a href="https://www.instagram.com/swan.6726523/">
     Instagram
   </a>
@@ -27,7 +23,7 @@
     Email
   </a>
   ·
-  <a href="https://github.com/rodjanaesmith-labs/swan-digital-studio">
+  <a href="https://github.com/rodjanaesmith-labs/swan-digital-studio.git">
     GitHub
   </a>
 </p>
@@ -44,7 +40,7 @@ I enjoy turning ideas into useful, attractive digital experiences and continuous
 
 <p align="center">
   <img
-    src="assets/Swan%20Digital%20Studio%20Welcome%20Poster.png"
+    src="assets/Swan Digital Studio Welcome Poster.png"
     alt="Swan Digital Studio welcome poster"
     width="650"
   />
@@ -60,18 +56,20 @@ My design identity combines deep navy blue, gold, and elegant details to create 
 
 Explore my collection of sample business websites.
 
-| Website | Live Demo |
-|---|---|
-| 💎 **Bead & Bloom** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/bead-and-bloom/) |
-| 📚 **Bright Minds Tutoring** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/bright-minds-tutoring/) |
-| 👑 **Crown and Curl** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/crown-and-curl/) |
-| 💅 **Glow Nails** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/glow-nails/) |
-| ✨ **Golden Hours Events** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/golden-hour-events/) |
-| 📷 **Lens and Light** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/lens-and-light/) |
-| 🥭 **Mango Lane** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/mango-lane/) |
-| 💪 **Pulse Fitness** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/pulse-fitness/) |
-| 🧼 **Sparkle Cleaning** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/sparkle-cleaning/) |
-| 🍗 **Sunset Jerk Kitchen** | [View live site ↗](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/sunset-jerk-kitchen/) |
+| Website | Live Demo | Source Code |
+|---|---|---|
+| 💎 **Bead & Bloom** | Coming soon | [View code](samples/bead-and-bloom/index.html) |
+| 📚 **Bright Minds Tutoring** | Coming soon | [View code](samples/bright-minds-tutoring/index.html) |
+| 👑 **Crown and Curl** | Coming soon | [View code](samples/crown-and-curl/index.html) |
+| 💅 **Glow Nails** | Coming soon | [View code](samples/glow-nails/index.html) |
+| ✨ **Golden Hours Events** | Coming soon | [View code](samples/golden-hours-events/index.html) |
+| 📷 **Lens and Light** | Coming soon | [View code](samples/lens-and-light/index.html) |
+| 🥭 **Mango Lane** | Coming soon | [View code](samples/mango-lane/index.html) |
+| 💪 **Pulse Fitness** | Coming soon | [View code](samples/pulse-fitness/index.html) |
+| 🧼 **Sparkle Cleaning** | Coming soon | [View code](samples/sparkle-cleaning/index.html) |
+| 🍗 **Sunset Jerk Kitchen** | Coming soon | [View code](samples/sunset-jerk-kitchen/index.html) |
+
+*Replace "Coming soon" with each website's published URL when its live demo is ready. The source links assume the folder names match the actual repository.*
 
 ## 🛠️ Technologies & Tools
 
@@ -107,7 +105,7 @@ I'd love to hear about your project. Reach out and tell me what you're building.
 
 - 📸 **Instagram:** [@swan.6726523](https://www.instagram.com/swan.6726523/)
 - 📧 **Email:** [rodjanaesmith.business2025@gmail.com](mailto:rodjanaesmith.business2025@gmail.com)
-- 💻 **GitHub:** [rodjanaesmith-labs](https://github.com/rodjanaesmith-labs/swan-digital-studio)
+- 💻 **GitHub:** [rodjanaesmith-labs](https://github.com/rodjanaesmith-labs/swan-digital-studio.git)
 
 Let's bring your vision to life!
 
