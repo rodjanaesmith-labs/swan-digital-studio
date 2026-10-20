@@ -34,7 +34,6 @@ Each link opens the published sample website directly.
 
 | Sample website | Live sample website |
 |---|---|
-| **Bead & Bloom** | [View sample website](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/bead-and-bloom/index.html) |
 | **Bright Minds Tutoring** | [View sample website](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/bright-minds-tutoring/index.html) |
 | **Crown and Curl** | [View sample website](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/crown-and-curl/index.html) |
 | **Glow Nails** | [View sample website](https://rodjanaesmith-labs.github.io/swan-digital-studio/samples/glow-nails/index.html) |
