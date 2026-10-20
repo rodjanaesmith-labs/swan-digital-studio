@@ -69,8 +69,6 @@ Explore my collection of sample business websites.
 | 🧼 **Sparkle Cleaning** | Coming soon | [View code](samples/sparkle-cleaning/) |
 | 🍗 **Sunset Jerk Kitchen** | Coming soon | [View code](samples/sunset-jerk-kitchen/) |
 
-*Replace "Coming soon" with each website's published URL when its live demo is ready. The source links assume the folder names match the actual repository.*
-
 ## 🛠️ Technologies & Tools
 
 ### Programming Languages and Web Technologies
